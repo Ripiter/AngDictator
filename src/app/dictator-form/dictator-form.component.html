@@ -1,0 +1,18 @@
+<form [formGroup]="loginData" (ngSubmit) = "onLoginSubmit()">
+ 
+    <input type="text" placeholder="Name" name="Name" formControlName = "Name"> <br>
+    <input type="text" placeholder="LastName" name="LastName" formControlName = "LastName"> <br>
+    <input type="date" placeholder="BirthDay" name="Birthday" formControlName = "BirthDay"> <br>
+    <input type="text" placeholder="Death" name="Death" formControlName = "Death"> <br>
+    <input type="text" placeholder="Description" name="Description" formControlName = "Description"> <br>
+    <input type="submit" value="Submit">
+  
+  </form>
+
+  <br>
+
+  <div *ngFor="let dic of dictators;let i = index">
+
+    {{ dic.ToString() }} <button (click)="onClickMe(dic)">Click me!</button>
+
+  </div>    
